@@ -1,0 +1,182 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("Poze/paper.jpg");
+}
+
+.grid-container{
+    max-width: 100vw;
+    height: 100vh;
+    font-family: "Fjalla One";
+    font-size: 20px;
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: 100px 1fr 1fr 1fr 100px;
+    grid-template-rows: 100px 1fr 50px;
+
+    padding: 10px;
+    box-sizing: border-box;
+}   
+
+.nav{
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+.credits{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    background-color: #747264;
+    text-align: center;
+    line-height: 45px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.nav{
+    background-color: #EEEDEB;
+}
+
+.menu{
+    list-style: none;
+}
+
+.menu > li{
+    display: inline-block;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+
+.menu > li > a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.grid-container div{
+    border: 3px solid black;
+}
+
+.credits{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background-color: #747264;
+}
+
+.underline {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease-in, opacity 0s ease-in;
+}
+
+.top20 > a:hover + .underline {
+    width: 100%;
+    opacity: 1;
+}
+
+.about > a:hover + .underline {
+    width: 100%;
+    opacity: 1;
+}
+
+.home > a:hover + .underline {
+    width: 100%;
+    opacity: 1;
+}
+
+.joc > a:hover + .underline {
+    width: 100%;
+    opacity: 1;
+}
+
+.poza > img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+#poza1{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#poza2{
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#poza3{
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.back{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.next{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.next{
+    text-align: center;
+    background: linear-gradient(to bottom right, #EEEDEB, #747264);
+}
+.back{
+    background: linear-gradient(to bottom right, #EEEDEB, #747264);
+}
+
+.next > a{
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    line-height: 9.5em;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #EEEDEB;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none;
+}
+.submenu a {
+    color: black;
+    padding: 12px 18px;
+    display: block;
+    text-decoration: none;
+    margin-right: 40px;
+}
+.top20:hover .submenu {
+    display: block;
+}
+
+@media only screen and (max-width: 850px){
+    .logo{
+        display: none;
+    }
+
+    .nav{
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    .menu > li{
+        display: inline-block;
+        margin-right: 0.3rem;
+        margin-left: 5rem;
+        margin-top: 1rem;
+    }
+}
